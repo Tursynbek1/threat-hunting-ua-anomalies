@@ -45,9 +45,7 @@ threat-hunting-project/
 
 ## Team
 
-- [Name 1] — role
-- [Name 2] — role
-- [Name 3] — role
+Aitzhan Tursynbek
 
 ## Ethical note
 
