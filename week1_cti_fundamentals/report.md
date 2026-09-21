@@ -1,9 +1,9 @@
 # Week 1 — Cyber Threat Intelligence Fundamentals
 ### Applied to: Port Scanning and Reconnaissance
 
-**Group:** [group name / number]
-**Date:** [date]
-**Team members:** [names]
+**Group:** CS-2427
+**Date:** 21.09
+**Team members:** Tursynbek
 
 ---
 
