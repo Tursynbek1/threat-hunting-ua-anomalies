@@ -1,0 +1,9 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+
+# MISP / secrets - never commit real credentials or API keys
+.env
+*api_key*
+*secrets*
