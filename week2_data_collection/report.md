@@ -29,6 +29,7 @@ Following the course's collection process:
 ---
 
 ## 2. Tool 1 — Shodan ("What is visible from the Internet?")
+![Nmap scan of scanme.nmap.org](screenshots/nmap_scanme_result.png)
 
 **Target used:** `scanme.nmap.org` (Nmap's official public scan-test host —
 scanning and looking it up is explicitly permitted) and/or our own lab VM.
@@ -67,7 +68,7 @@ We looked up:
   not a verdict*, per the course's "enrichment, not a verdict" principle
 - Any tags such as `scanner`, `masscan`, `shodan-crawler` if present in
   community comments
-- Screenshot: `screenshots/virustotal_lookup.png`
+![VirusTotal lookup](screenshots/virustotal_lookup.png)
 
 ---
 
@@ -84,7 +85,7 @@ Pivoting mindset followed: **Seed → Transform → Inspect → Pivot → Stop**
 3. IP → netblock / ASN owner
 
 **What we recorded:**
-- Screenshot of the resulting graph: `screenshots/maltego_graph.png`
+![Maltego graph — scanme.nmap.org](screenshots/maltego_graph.png)
 - Short written interpretation: does this infrastructure look like a
   single organization's legitimate service, a known scanning/research
   provider (e.g., Shodan's own crawler ranges, Censys), or something
