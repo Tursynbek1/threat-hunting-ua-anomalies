@@ -1,9 +1,9 @@
 # Week 2 — Data Collection Process
 ### Applied to: Port Scanning and Reconnaissance
 
-**Group:** [group name / number]
-**Date:** [date]
-**Team members:** [names]
+**Group:** CS-2427
+**Date:** 22.09
+**Team members:** Tursynbek
 
 ---
 
@@ -45,7 +45,7 @@ product:"OpenSSH"
 - Open ports and the service/product+version banner on each
 - Any outdated/vulnerable-looking software versions flagged by Shodan
 - Organization/ASN that owns the IP
-- Screenshot: `screenshots/shodan_scanme_result.png`
+- Screenshot: ![Shodan lookup — scanme.nmap.org](Снимок экрана — 2026-09-21 в 19.29.52)
 
 **Notes:** Shodan shows what was observed *at scan time* by Shodan's own
 crawlers — it does not perform a live scan for us. Exposure can change
