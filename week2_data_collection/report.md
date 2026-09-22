@@ -45,7 +45,7 @@ product:"OpenSSH"
 - Open ports and the service/product+version banner on each
 - Any outdated/vulnerable-looking software versions flagged by Shodan
 - Organization/ASN that owns the IP
-- Screenshot: ![Shodan lookup — scanme.nmap.org](Снимок экрана — 2026-09-21 в 19.29.52.png)
+- Screenshot: ![Shodan lookup](screenshots/Снимок экрана — 2026-09-21 в 19.29.52.png)
 
 **Notes:** Shodan shows what was observed *at scan time* by Shodan's own
 crawlers — it does not perform a live scan for us. Exposure can change
