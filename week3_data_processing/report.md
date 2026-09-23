@@ -1,9 +1,9 @@
 # Week 3 — Data Processing and Exploitation
 ### Applied to: Port Scanning and Reconnaissance
 
-**Group:** [group name / number]
-**Date:** [date]
-**Team members:** [names]
+**Group:** CS-2427
+**Date:** 23.09
+**Team members:** Tursynbek
 
 ---
 
@@ -32,7 +32,7 @@ docker compose up -d
 
 - Accessed the web UI at `https://localhost` (or the configured host)
 - Logged in with the default admin account and changed the password
-- Screenshot: `screenshots/misp_dashboard.png`
+![MISP events list](screenshots/misp_dashboard.png)
 
 *(If your team used a hosted/demo MISP instance instead, replace this
 section with how you accessed it and note that it is a shared/demo
@@ -58,7 +58,7 @@ topic:
 | md5 / sha256 | (if any file was involved, e.g., a scanning tool sample) | VirusTotal, Week 2 |
 | comment | "Repeated SYN scans observed against ports 22, 80, 443" | Our own analysis |
 
-Screenshot of the populated event: `screenshots/misp_event_attributes.png`
+![MISP event with imported IOCs](screenshots/misp_event_attributes.png)
 
 ---
 
@@ -88,7 +88,7 @@ event/feed. We reviewed:
 - Whether our imported IPs correlated with any built-in/community feed
   already in MISP (e.g., known scanner list feeds such as GreyNoise-style
   data, if configured)
-- Screenshot: `screenshots/misp_correlation_graph.png`
+![MISP correlation graph](screenshots/misp_correlation_graph.png)
 
 ---
 
