@@ -55,3 +55,5 @@ research targets** (e.g., scanme.nmap.org, which explicitly permits
 scanning for learning purposes), or use **passive, already-public data**
 (Shodan's own index, VirusTotal, public threat reports). No unauthorized
 scanning of third-party systems was performed as part of this coursework.
+
+cloud AI was used to write some text
