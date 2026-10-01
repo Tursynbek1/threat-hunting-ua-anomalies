@@ -1,0 +1,31 @@
+{
+  "name": "Equifax 2017 breach - Week 4",
+  "versions": {"attack": "17", "navigator": "5.1.0", "layer": "4.5"},
+  "domain": "enterprise-attack",
+  "description": "Equifax 2017 attack mapped to ATT&CK (red = attacker techniques). Blue = our own Week 2-3 recon activity.",
+  "gradient": {"colors": ["#ffffff", "#ff6666"], "minValue": 0, "maxValue": 100},
+  "techniques": [
+    {"techniqueID": "T1595.002", "color": "#ff6666", "comment": "Scanning for vulnerable Struts hosts", "enabled": true},
+    {"techniqueID": "T1592.002", "color": "#ff6666", "comment": "Identify Struts version", "enabled": true},
+    {"techniqueID": "T1590", "color": "#ff6666", "comment": "Map exposed portal/network", "enabled": true},
+    {"techniqueID": "T1588.005", "color": "#ff6666", "comment": "Public CVE-2017-5638 exploit", "enabled": true},
+    {"techniqueID": "T1190", "color": "#ff6666", "comment": "Malicious Content-Type header to ACIS portal", "enabled": true},
+    {"techniqueID": "T1059.004", "color": "#ff6666", "comment": "Commands on server after RCE", "enabled": true},
+    {"techniqueID": "T1505.003", "color": "#ff6666", "comment": "Web shells", "enabled": true},
+    {"techniqueID": "T1552.001", "color": "#ff6666", "comment": "Plain-text credentials on file shares", "enabled": true},
+    {"techniqueID": "T1078", "color": "#ff6666", "comment": "Valid accounts for lateral movement", "enabled": true},
+    {"techniqueID": "T1083", "color": "#ff6666", "comment": "Locate data of interest", "enabled": true},
+    {"techniqueID": "T1046", "color": "#ff6666", "comment": "Network service discovery", "enabled": true},
+    {"techniqueID": "T1071.001", "color": "#ff6666", "comment": "Web-shell C2 over HTTP/S", "enabled": true},
+    {"techniqueID": "T1573", "color": "#ff6666", "comment": "Encrypted channel", "enabled": true},
+    {"techniqueID": "T1090", "color": "#ff6666", "comment": "Many IPs in different countries", "enabled": true},
+    {"techniqueID": "T1213", "color": "#ff6666", "comment": "Thousands of DB queries", "enabled": true},
+    {"techniqueID": "T1560", "color": "#ff6666", "comment": "Compressed data", "enabled": true},
+    {"techniqueID": "T1074", "color": "#ff6666", "comment": "Data staged", "enabled": true},
+    {"techniqueID": "T1041", "color": "#ff6666", "comment": "Exfil over C2 channel", "enabled": true},
+    {"techniqueID": "T1030", "color": "#ff6666", "comment": "Small chunks", "enabled": true},
+    {"techniqueID": "T1595.001", "color": "#6699ff", "comment": "OUR Nmap scan of scanme.nmap.org", "enabled": true},
+    {"techniqueID": "T1596.005", "color": "#6699ff", "comment": "OUR Shodan lookup", "enabled": true},
+    {"techniqueID": "T1590.002", "color": "#6699ff", "comment": "OUR Maltego DNS graph", "enabled": true}
+  ]
+}
