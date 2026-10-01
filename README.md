@@ -20,19 +20,20 @@ unauthorized scans against systems we do not own or have permission to test.
 
 ## Repository structure
 
-```
 threat-hunting-project/
 ├── README.md
 ├── week1_cti_fundamentals/
-│   └── report.md          # CTI glossary + threat classification for recon/scanning
+│ └── report.md # CTI glossary + threat classification for recon/scanning
 ├── week2_data_collection/
-│   ├── report.md          # OSINT workflow: Shodan, VirusTotal, Maltego
-│   └── screenshots/       # evidence screenshots (add your own)
+│ ├── report.md # OSINT workflow: Shodan, VirusTotal, Maltego
+│ └── screenshots/ # evidence screenshots
 ├── week3_data_processing/
-│   ├── report.md          # MISP deployment, IOC import, normalization
-│   └── screenshots/       # evidence screenshots (add your own)
-└── scripts/                # any helper scripts (nmap parsers, log parsers, etc.)
-```
+│ ├── report.md # MISP deployment, IOC import, normalization
+│ └── screenshots/ # evidence screenshots
+├── week4_kill_chain/
+│ ├── Week4_Cyber_Kill_Chain-2.md # Equifax breach mapped to 7 Kill Chain stages
+│ └── week4_equifax_attck_navigator_layer.json # ATT&CK Navigator layer (importable visualization)
+└── scripts/ # any helper scripts (nmap parsers, log parsers, etc.)
 
 ## Weekly progress log
 
@@ -41,8 +42,8 @@ threat-hunting-project/
 | 1 | CTI Fundamentals | ✅ Draft ready — fill in team specifics |
 | 2 | Data Collection Process | ✅ Draft ready — add real screenshots |
 | 3 | Data Processing and Exploitation | ✅ Draft ready — add real MISP export |
-| 4+ | Cyber Kill Chain, Threat Hunting, ATT&CK... | 🔲 Upcoming |
-
+| 4+ | Cyber Kill Chain, Threat Hunting, ATT&CK... 
+| 5+ | Threat Hunting concept, ATT&CK, MITRE CAR... | 🔲 Upcoming |
 ## Team
 
 Aitzhan Tursynbek
@@ -56,4 +57,4 @@ scanning for learning purposes), or use **passive, already-public data**
 (Shodan's own index, VirusTotal, public threat reports). No unauthorized
 scanning of third-party systems was performed as part of this coursework.
 
-cloud AI was used to write some text
+ claude AI was used to write some text. some text  sonnect 5
