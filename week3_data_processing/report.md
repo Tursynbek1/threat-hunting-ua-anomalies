@@ -125,3 +125,5 @@ Per the course's "data quality problems" framework:
 
 - MISP Training Documentation: https://www.misp-project.org/training/
 - MISP official documentation: https://www.misp-project.org/documentation/
+
+
