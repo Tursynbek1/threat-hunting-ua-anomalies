@@ -1,0 +1,109 @@
+{
+    "name": "Port Scanning & Reconnaissance Project - Weeks 1-6",
+    "versions": {
+        "attack": "17",
+        "navigator": "5.1.0",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques studied/simulated across our Introduction to Threat Hunting group project (topic: Port Scanning and Reconnaissance). Red = external reconnaissance (Weeks 1-2, scanme.nmap.org). Orange = internal discovery, simulated Week 6 against our own lab network.",
+    "filters": {
+        "platforms": [
+            "Windows",
+            "Linux",
+            "macOS",
+            "Network"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": true,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1595",
+            "tactic": "reconnaissance",
+            "color": "#e60d0d",
+            "comment": "External active scanning performed Weeks 1-2 against scanme.nmap.org (Nmap, Shodan). Logged as IOC in MISP Week 3.",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1595.001",
+            "tactic": "reconnaissance",
+            "color": "#e60d0d",
+            "comment": "Scanning IP blocks / ports - Nmap scan of scanme.nmap.org, Week 2",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1595.002",
+            "tactic": "reconnaissance",
+            "color": "#e60d0d",
+            "comment": "Vulnerability/version scanning - banner grabbing OpenSSH 7.4 / Apache 2.4.6, Week 2",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1592",
+            "tactic": "reconnaissance",
+            "color": "#e60d0d",
+            "comment": "Gather victim host information via Shodan, Week 2",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1590",
+            "tactic": "reconnaissance",
+            "color": "#e60d0d",
+            "comment": "DNS/network info gathered via Maltego graph, Week 2",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1046",
+            "tactic": "discovery",
+            "color": "#f7a543",
+            "comment": "Internal network service discovery simulated Week 6 against our own lab/home network. Detected in Week 7 using CAR-2021-01-001 analytic (port count > 5 per source IP).",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#66b1ff"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [
+        {
+            "color": "#e60d0d",
+            "label": "External Reconnaissance (Weeks 1-2)"
+        },
+        {
+            "color": "#f7a543",
+            "label": "Internal Discovery (Week 6)"
+        }
+    ],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true,
+    "selectSubtechniquesWithParent": false,
+    "selectVisibleTechniques": false
+}
