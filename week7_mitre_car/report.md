@@ -1,9 +1,9 @@
 # Week 7 — Using MITRE CAR (Cyber Analytics Repository)
 ### Applied to: Port Scanning and Reconnaissance
 
-**Group:** [group name / number]
-**Date:** [date]
-**Team members:** [names]
+**Group:** CS-2472
+**Date:** 18.10
+**Team members:** Tursynbek
 
 ---
 

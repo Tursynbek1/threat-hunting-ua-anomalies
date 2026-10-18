@@ -1,9 +1,9 @@
 # Week 6 — ATT&CK Framework
 ### Applied to: Port Scanning and Reconnaissance
 
-**Group:** [group name / number]
-**Date:** [date]
-**Team members:** [names]
+**Group:** CS-2427
+**Date:** 12.10
+**Team members:** Tursynbek
 
 ---
 
