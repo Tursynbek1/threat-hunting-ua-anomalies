@@ -77,7 +77,9 @@ nmap -sV 192.168.1.0/24
 first with `ipconfig getifaddr en0` on Mac, or `ip addr` on Linux. Only
 ever point this at a network you own.)*
 
-**Screenshot:** `screenshots/nmap_internal_scan.png`
+![Nmap internal scan](screenshots/nmap_internal_scan_1.png)
+
+![Nmap internal scan continued](screenshots/nmap_internal_scan_2.png)
 
 ### What we expected / found
 
@@ -126,7 +128,7 @@ visualize how our weekly work has moved across the matrix:
 2. Click **Open Existing Layer → Upload from local**
 3. Select `week6_attck_navigator_layer.json`
 
-**Screenshot:** `screenshots/navigator_layer_view.png` (after uploading,
+![ATT&CK Navigator layer](screenshots/navigator_layer_view.png) (after uploading,
 screenshot the matrix showing the two highlighted techniques)
 
 ---

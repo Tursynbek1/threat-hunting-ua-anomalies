@@ -132,7 +132,7 @@ aggregation and **removes** any bucket (any source IP) that doesn't
 satisfy the condition, so the only rows left in the response are the
 ones CAR's analytic would flag as a probable port scan.
 
-**Screenshot:** `screenshots/car_query_dev_tools.png`
+![CAR query in Kibana Dev Tools](screenshots/car_query_dev_tools.png)
 
 ### Expected result
 
