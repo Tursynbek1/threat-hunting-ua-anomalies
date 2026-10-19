@@ -96,8 +96,8 @@ internal network in one step.
 
 | IP found | Open ports | Likely device/service |
 |---|---|---|
-| *(fill in)* | *(fill in)* | *(fill in)* |
-| *(fill in)* | *(fill in)* | *(fill in)* |
+| `192.168.0.1` | 53/tcp (domain), 80/tcp (ssl/http) | Network router/gateway — DNS service and web-based administration interface (HTTPS) |
+| `192.168.0.138` | 5000/tcp (rtsp — AirTunes), 7000/tcp (rtsp — AirTunes) | Your own Mac (AirPlay/AirTunes — Apple's audio synchronization service) |
 
 ---
 
