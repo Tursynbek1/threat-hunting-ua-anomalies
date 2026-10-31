@@ -1,10 +1,12 @@
 # Week 8 — Creating a Plan to Emulate an Attacker's Action
 ### Applied to: Port Scanning and Reconnaissance
 
-**Group:** [group name / number]
-**Date:** [date]
-**Team members:** [names]
-
+**Group:** Aitzhan
+**Date:** 20.10
+**Team members:** Tursynbek
+git add week8_adversary_emulation/
+git commit -m "Update report-3 with screenshots and corrected scope section"
+git push
 ---
 
 ## 1. Why this week matters for our project
@@ -65,6 +67,8 @@ further into the target's internal network.
 | 12 | **Exfiltration** (TA0010) | **T1041** — Exfiltration Over C2 Channel | Attacker exfiltrates the collected data over the same C2 channel | ❌ Plan only |
 
 The three stages the syllabus specifically names map onto this chain as:
+![nmap scan](screenshots/01_nmap_port22_open.png)
+![ssh login](screenshots/02_ssh_login.png)
 - **Initial Access** → step 3 (T1190)
 - **Persistence** → step 5 (T1053.003)
 - **Data Exfiltration** → step 12 (T1041)
@@ -105,31 +109,56 @@ technique we actually performed in Week 6; blue = the three stages the
 syllabus specifically asks this week's plan to cover — Initial Access,
 Persistence, Exfiltration. GitHub renders this Mermaid diagram directly
 when viewing the file.)*
-
-**Screenshot (optional, if you render the diagram separately):**
-`screenshots/attack_chain_diagram.png`
+![cron persistence](screenshots/03_cron_persistence.png)
 
 ---
 
 ## 5. Honest note on scope and what was not executed
 
-This plan intentionally stops at the **documentation stage** for every
-step except the two scans (steps 1 and 8) that reuse our team's real,
-previously-collected data. We did **not**:
-- obtain or run any real exploit (step 2–3)
+This plan intentionally stops at the **documentation stage** for most
+steps. A small number of steps were additionally **demonstrated in a
+closed, isolated lab environment** (two VMs we fully control — no
+production or third-party infrastructure involved), to validate that the
+underlying mechanism works, without using any real exploit code or
+malware:
+
+- **Persistence (step 5, T1053.003):** a cron job was installed on the
+  victim VM, confirmed to execute repeatedly (writing timestamped log
+  entries), and then removed. No backdoor or C2 reconnection logic was
+  used — only a benign `date >> logfile` command, to demonstrate the
+  *mechanism* of cron-based persistence.
+- **Exfiltration (step 12, T1041):** a test file was transferred from
+  the victim VM to the attacker VM via `scp`, and the SHA-256 hash was
+  verified identical on both ends, to demonstrate that a file can leave
+  the victim host over a remote channel. No real sensitive data was
+  collected or moved — only a throwaway test file created for this
+  exercise.
+
+We explicitly did **not**:
+- obtain or run any real exploit (steps 2–3)
 - escalate privileges on any system (step 6)
 - modify or delete logs on any system (step 7)
 - move laterally between machines (step 9)
-- collect or exfiltrate any real data (steps 10–12)
+- collect or exfiltrate any real/sensitive data (step 10)
+- use an actual C2 channel or HTTPS beaconing (step 11)
 
 This mirrors exactly how MITRE's own CALDERA tool and public ATT&CK
 adversary emulation plans are structured: a **documented sequence of
-technique IDs and procedures**, meant to guide a future, properly
-authorized Red Team exercise — not a record of an attack that was
-actually carried out. Doing so against infrastructure we don't own would
-be illegal; the syllabus assignment explicitly asks for a *plan*, which
-is what this section provides.
+technique IDs and procedures**, with selected steps safely validated in
+a lab, meant to guide a future, properly authorized Red Team exercise —
+not a record of an attack carried out against real infrastructure. Doing
+so against infrastructure we don't own would be illegal; the syllabus
+assignment explicitly asks for a *plan*, which is what this section
+provides, backed by limited, controlled proof-of-concept validation.
 
+**Screenshot:** SSH authentication logs (journalctl) showing the failed
+and accepted login attempts generated during this exercise —
+demonstrating that these actions leave a detectable trail.
+![ssh logs](screenshots/04_ssh_logs.png)
+
+**Screenshot:** test file exfiltrated from the victim VM to the attacker
+VM via scp, with SHA-256 hash verified identical on both hosts.
+![exfiltration](screenshots/05_exfiltration.png)
 ---
 
 ## 6. Mapping back to ATT&CK (summary)
