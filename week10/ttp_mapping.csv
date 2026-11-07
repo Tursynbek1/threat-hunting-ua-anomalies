@@ -1,0 +1,17 @@
+technique_id,technique,tactic,APT29_G0016,APT41_G0096,group_use
+T1595.002,Active Scanning: Vulnerability Scanning,Reconnaissance,Conducted widespread scanning of target environments to identify vulnerabilities for exploit,Used the Acunetix SQL injection scanner and JexBoss (Java apps) in target reconnaissance,both
+T1595.003,Active Scanning: Wordlist Scanning,Reconnaissance,,Brute-forces directories on web servers with various tools/frameworks,APT41
+T1596.005,Search Open Technical Databases: Scan Databases,Reconnaissance,,Uses fofa.su (Shodan-like) for passive scanning of victims,APT41
+T1593.002,Search Open Websites/Domains: Search Engines,Reconnaissance,,APT41 DUST campaign used search engines to research victim servers,APT41
+T1594,Search Victim-Owned Websites,Reconnaissance,,APT41 DUST campaign accessed external victim websites for target development,APT41
+T1046,Network Service Discovery,Discovery,,WIDETONE malware variant used to conduct port scans on specified subnets,APT41
+T1018,Remote System Discovery,Discovery,"(listed in campaign data only, no procedure text seen)",Used MiPing to discover active systems in the victim network,APT41
+T1016,System Network Configuration Discovery,Discovery,,Collected MAC addresses; C0017: cmd.exe /c ping %userdomain%,APT41
+T1135,Network Share Discovery,Discovery,,Used the net share command as part of network reconnaissance,APT41
+T1049,System Network Connections Discovery,Discovery,,Used netstat; HIGHNOON used to enumerate active RDP sessions,APT41
+T1087.002,Account Discovery: Domain Account,Discovery,SolarWinds: PowerShell Get-ADUser / Get-ADGroupMember,,APT29
+T1087.004,Account Discovery: Cloud Account,Discovery,Enumerated Azure AD accounts,,APT29
+T1482,Domain Trust Discovery,Discovery,SolarWinds: Get-AcceptedDomain; AdFind to discover federated-domain trusts,,APT29
+T1069.002,Permission Groups Discovery: Domain Groups,Discovery,SolarWinds: AdFind to enumerate domain groups,,APT29
+T1083,File and Directory Discovery,Discovery,SolarWinds: Get-WebServicesVirtualDirectory,,APT29
+T1680,Local Storage Discovery,Discovery,SolarWinds: fsutil to check free disk space,,APT29

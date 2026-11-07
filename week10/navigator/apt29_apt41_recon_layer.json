@@ -1,0 +1,132 @@
+{
+ "name": "Port scanning & recon - APT29 vs APT41 (+ lab)",
+ "versions": {
+  "attack": "20",
+  "navigator": "5.1.0",
+  "layer": "4.5"
+ },
+ "domain": "enterprise-attack",
+ "description": "Blue=APT29, orange=APT41, purple=both, green=technique emulated in Week 9 lab but not in group pages. Source: attack.mitre.org groups G0016, G0096.",
+ "techniques": [
+  {
+   "techniqueID": "T1595.002",
+   "color": "#8e44ad",
+   "comment": "APT29 + APT41. APT29: Conducted widespread scanning of target environments to identify vulnerabilities for exploit | APT41: Used the Acunetix SQL injection scanner and JexBoss (Java apps) in target reconnaissance",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1595.003",
+   "color": "#e08a1e",
+   "comment": "APT41. APT29: - | APT41: Brute-forces directories on web servers with various tools/frameworks",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1596.005",
+   "color": "#e08a1e",
+   "comment": "APT41. APT29: - | APT41: Uses fofa.su (Shodan-like) for passive scanning of victims",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1593.002",
+   "color": "#e08a1e",
+   "comment": "APT41. APT29: - | APT41: APT41 DUST campaign used search engines to research victim servers",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1594",
+   "color": "#e08a1e",
+   "comment": "APT41. APT29: - | APT41: APT41 DUST campaign accessed external victim websites for target development",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1046",
+   "color": "#e08a1e",
+   "comment": "APT41. APT29: - | APT41: WIDETONE malware variant used to conduct port scans on specified subnets",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1018",
+   "color": "#e08a1e",
+   "comment": "APT41. APT29: (listed in campaign data only, no procedure text seen) | APT41: Used MiPing to discover active systems in the victim network",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1016",
+   "color": "#e08a1e",
+   "comment": "APT41. APT29: - | APT41: Collected MAC addresses; C0017: cmd.exe /c ping %userdomain%",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1135",
+   "color": "#e08a1e",
+   "comment": "APT41. APT29: - | APT41: Used the net share command as part of network reconnaissance",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1049",
+   "color": "#e08a1e",
+   "comment": "APT41. APT29: - | APT41: Used netstat; HIGHNOON used to enumerate active RDP sessions",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1087.002",
+   "color": "#3b82c4",
+   "comment": "APT29. APT29: SolarWinds: PowerShell Get-ADUser / Get-ADGroupMember | APT41: -",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1087.004",
+   "color": "#3b82c4",
+   "comment": "APT29. APT29: Enumerated Azure AD accounts | APT41: -",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1482",
+   "color": "#3b82c4",
+   "comment": "APT29. APT29: SolarWinds: Get-AcceptedDomain; AdFind to discover federated-domain trusts | APT41: -",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1069.002",
+   "color": "#3b82c4",
+   "comment": "APT29. APT29: SolarWinds: AdFind to enumerate domain groups | APT41: -",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1083",
+   "color": "#3b82c4",
+   "comment": "APT29. APT29: SolarWinds: Get-WebServicesVirtualDirectory | APT41: -",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1680",
+   "color": "#3b82c4",
+   "comment": "APT29. APT29: SolarWinds: fsutil to check free disk space | APT41: -",
+   "enabled": true
+  },
+  {
+   "techniqueID": "T1595.001",
+   "color": "#2e7d32",
+   "comment": "Our lab: port scan of an IP block from outside (same behaviour as Test #1 / scan_python.py). Not listed for APT29/APT41 on the group pages.",
+   "enabled": true
+  }
+ ],
+ "legendItems": [
+  {
+   "label": "APT29 only",
+   "color": "#3b82c4"
+  },
+  {
+   "label": "APT41 only",
+   "color": "#e08a1e"
+  },
+  {
+   "label": "both",
+   "color": "#8e44ad"
+  },
+  {
+   "label": "lab only (T1595.001)",
+   "color": "#2e7d32"
+  }
+ ]
+}
