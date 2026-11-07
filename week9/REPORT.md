@@ -2,7 +2,7 @@
 
 **Course:** Introduction to Threat Hunting (ITH), 2026-2027, syllabus section 3.3, Week 9
 **Syllabus task:** *Run selected atomic tests (e.g., T1059, T1003). Record and analyze the test results in a SIEM.*
-**Our topic:** Port Scanning and Reconnaissance  |  **Team:** _<group name / members>_
+**Our topic:** Port Scanning and Reconnaissance  |  **Team:** Aitzhan Tursynbek cs-2427
 
 ## 1. Goal and approach
 Instead of T1059/T1003 we work with the technique that belongs to our topic: **T1046 – Network Service Discovery** (port scanning once the
