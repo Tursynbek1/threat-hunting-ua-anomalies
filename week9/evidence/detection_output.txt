@@ -1,0 +1,14 @@
+run                 src            SYNs  ports  dur(s)  rate/s   RST%  alerts
+B_atomic_T1046_1    127.0.0.1     65535  65535   66.05   992.2   100%  PS-1, PS-2, PS-3
+A_benign            127.0.0.2        12      3    4.41     2.7     0%  -
+C_python_fast       127.0.0.3      1024   1024    0.13  7884.6   100%  PS-1, PS-2, PS-3
+D_python_slow       127.0.0.4        40     40  117.02     0.3    98%  PS-2, PS-3
+
+ALERT PS-1 fast port scan    src=127.0.0.1  run=B_atomic_T1046_1   latency=0.33s
+ALERT PS-2 slow port scan    src=127.0.0.1  run=B_atomic_T1046_1   latency=0.25s
+ALERT PS-3 closed-port ratio src=127.0.0.1  run=B_atomic_T1046_1   latency=66.05s
+ALERT PS-1 fast port scan    src=127.0.0.3  run=C_python_fast      latency=0.0s
+ALERT PS-2 slow port scan    src=127.0.0.3  run=C_python_fast      latency=0.0s
+ALERT PS-3 closed-port ratio src=127.0.0.3  run=C_python_fast      latency=0.13s
+ALERT PS-2 slow port scan    src=127.0.0.4  run=D_python_slow      latency=42.01s
+ALERT PS-3 closed-port ratio src=127.0.0.4  run=D_python_slow      latency=117.02s

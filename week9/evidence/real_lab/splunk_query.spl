@@ -1,0 +1,1 @@
+source="scan.csv" | rex "\"(?<src_ip>\d+\.\d+\.\d+\.\d+)\",\"(?<dst_ip>\d+\.\d+\.\d+\.\d+)\".*?(?<sport>\d+)\s+>\s+(?<dest_port>\d+)\s+\[SYN\]" | stats dc(dest_port) AS ports, count AS syns BY src_ip, sport

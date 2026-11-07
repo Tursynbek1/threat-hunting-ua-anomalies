@@ -1,0 +1,153 @@
+{
+ "summary": [
+  {
+   "src": "127.0.0.1",
+   "run": "B_atomic_T1046_1",
+   "syn_count": 65535,
+   "distinct_ports": 65535,
+   "duration_s": 66.05,
+   "rate_per_s": 992.2,
+   "rst_ratio": 1.0,
+   "open_ports": [
+    22,
+    80,
+    443,
+    2024,
+    3306,
+    8080,
+    8443,
+    33727,
+    43011
+   ],
+   "alerts": [
+    "PS-1 fast port scan",
+    "PS-2 slow port scan",
+    "PS-3 closed-port ratio"
+   ]
+  },
+  {
+   "src": "127.0.0.2",
+   "run": "A_benign",
+   "syn_count": 12,
+   "distinct_ports": 3,
+   "duration_s": 4.41,
+   "rate_per_s": 2.7,
+   "rst_ratio": 0.0,
+   "open_ports": [
+    80,
+    443,
+    8080
+   ],
+   "alerts": []
+  },
+  {
+   "src": "127.0.0.3",
+   "run": "C_python_fast",
+   "syn_count": 1024,
+   "distinct_ports": 1024,
+   "duration_s": 0.13,
+   "rate_per_s": 7884.6,
+   "rst_ratio": 0.997,
+   "open_ports": [
+    22,
+    80,
+    443
+   ],
+   "alerts": [
+    "PS-1 fast port scan",
+    "PS-2 slow port scan",
+    "PS-3 closed-port ratio"
+   ]
+  },
+  {
+   "src": "127.0.0.4",
+   "run": "D_python_slow",
+   "syn_count": 40,
+   "distinct_ports": 40,
+   "duration_s": 117.02,
+   "rate_per_s": 0.3,
+   "rst_ratio": 0.975,
+   "open_ports": [
+    22
+   ],
+   "alerts": [
+    "PS-2 slow port scan",
+    "PS-3 closed-port ratio"
+   ]
+  }
+ ],
+ "alerts": [
+  {
+   "rule": "PS-1 fast port scan",
+   "src": "127.0.0.1",
+   "run": "B_atomic_T1046_1",
+   "first_event": 1793877698.473676,
+   "alert_ts": 1793877698.806348,
+   "detection_latency_s": 0.33,
+   "technique": "T1046 / T1595.001"
+  },
+  {
+   "rule": "PS-2 slow port scan",
+   "src": "127.0.0.1",
+   "run": "B_atomic_T1046_1",
+   "first_event": 1793877698.473676,
+   "alert_ts": 1793877698.720721,
+   "detection_latency_s": 0.25,
+   "technique": "T1046 / T1595.001"
+  },
+  {
+   "rule": "PS-3 closed-port ratio",
+   "src": "127.0.0.1",
+   "run": "B_atomic_T1046_1",
+   "first_event": 1793877698.473676,
+   "alert_ts": 1793877764.525045,
+   "detection_latency_s": 66.05,
+   "technique": "T1046"
+  },
+  {
+   "rule": "PS-1 fast port scan",
+   "src": "127.0.0.3",
+   "run": "C_python_fast",
+   "first_event": 1793877766.633612,
+   "alert_ts": 1793877766.636953,
+   "detection_latency_s": 0.0,
+   "technique": "T1046 / T1595.001"
+  },
+  {
+   "rule": "PS-2 slow port scan",
+   "src": "127.0.0.3",
+   "run": "C_python_fast",
+   "first_event": 1793877766.633612,
+   "alert_ts": 1793877766.636124,
+   "detection_latency_s": 0.0,
+   "technique": "T1046 / T1595.001"
+  },
+  {
+   "rule": "PS-3 closed-port ratio",
+   "src": "127.0.0.3",
+   "run": "C_python_fast",
+   "first_event": 1793877766.633612,
+   "alert_ts": 1793877766.763486,
+   "detection_latency_s": 0.13,
+   "technique": "T1046"
+  },
+  {
+   "rule": "PS-2 slow port scan",
+   "src": "127.0.0.4",
+   "run": "D_python_slow",
+   "first_event": 1793877771.858687,
+   "alert_ts": 1793877813.864547,
+   "detection_latency_s": 42.01,
+   "technique": "T1046 / T1595.001"
+  },
+  {
+   "rule": "PS-3 closed-port ratio",
+   "src": "127.0.0.4",
+   "run": "D_python_slow",
+   "first_event": 1793877771.858687,
+   "alert_ts": 1793877888.87474,
+   "detection_latency_s": 117.02,
+   "technique": "T1046"
+  }
+ ]
+}

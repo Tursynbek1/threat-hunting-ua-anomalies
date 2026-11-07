@@ -1,0 +1,42 @@
+# Sigma 2.x correlation rule - NOT executed in this lab (no Sigma backend available); provided for conversion with pySigma
+# (e.g. to Splunk or Elastic). Detects PS-1 "fast port scan": one source hits >= 20 distinct destination ports in 10 s.
+title: Network connection attempt (base event for port-scan correlation)
+name: net_conn_attempt
+status: experimental
+logsource:
+  category: firewall
+detection:
+  selection:
+    action:
+      - allowed
+      - denied
+      - blocked
+  condition: selection
+---
+title: Fast TCP port scan from a single source
+id: e6a39294-5172-437b-9e07-0fa761838b8d
+status: experimental
+description: One source IP contacts >= 20 distinct destination ports in 10 seconds (MITRE T1046, T1595.001).
+references:
+  - https://attack.mitre.org/techniques/T1046/
+  - https://attack.mitre.org/techniques/T1595/001/
+author: Group project - Port Scanning and Reconnaissance
+tags:
+  - attack.discovery
+  - attack.t1046
+  - attack.reconnaissance
+  - attack.t1595.001
+correlation:
+  type: value_count
+  rules:
+    - net_conn_attempt
+  group-by:
+    - src_ip
+  timespan: 10s
+  condition:
+    gte: 20
+    field: dst_port
+level: medium
+falsepositives:
+  - Vulnerability scanners and asset-inventory tools (allow-list their source IPs)
+  - Load-balancer health checks

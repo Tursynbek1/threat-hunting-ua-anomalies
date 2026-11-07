@@ -1,0 +1,16 @@
+benign client done
+port 22 is open
+port 80 is open
+port 443 is open
+port 2024 is open
+port 3306 is open
+port 8080 is open
+port 8443 is open
+port 33727 is open
+port 43011 is open
+
+real	1m6.086s
+user	0m37.670s
+sys	0m28.115s
+scanned 1024 ports from 127.0.0.3 in 0.1s; open: [22, 80, 443]
+scanned 40 ports from 127.0.0.4 in 120.0s; open: [22]
