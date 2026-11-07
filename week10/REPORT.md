@@ -2,7 +2,7 @@
 
 **Course:** Introduction to Threat Hunting (ITH), 2026-2027, syllabus section 3.3, Week 10
 **Syllabus task:** *Analyze the TTPs of APT29 or APT41. Map the observed techniques to the MITRE ATT&CK framework.*
-**Our topic:** Port Scanning and Reconnaissance  |  **Team:** _<group name / members>_
+**Our topic:** Port Scanning and Reconnaissance  |  Aitzhan Tursynbek CS-2427
 
 ## 1. Scope
 We analyse **both** groups, restricted to the part of the kill chain that matches our topic: reconnaissance (TA0043) and
